@@ -90,9 +90,9 @@ class FileServiceTest {
 		assertFalse(mapMowersMovements.isEmpty());
 		
 		Map<Mower, List<Movement>> mapMowersMovementsExpected = Map.of(
-				Mower.builder().coordinate(Coordinate.builder().x(1).y(2).build()).orientation(Orientation.N).build(),
+				Mower.builder().id(1).coordinate(Coordinate.builder().x(1).y(2).build()).orientation(Orientation.N).build(),
 				List.of(Movement.G, Movement.A, Movement.G, Movement.A, Movement.G, Movement.A, Movement.G, Movement.A, Movement.A),
-				Mower.builder().coordinate(Coordinate.builder().x(3).y(3).build()).orientation(Orientation.E).build(),
+				Mower.builder().id(2).coordinate(Coordinate.builder().x(3).y(3).build()).orientation(Orientation.E).build(),
 				List.of(Movement.A, Movement.A, Movement.D, Movement.A, Movement.A, Movement.D, Movement.A, Movement.D, Movement.D, Movement.A));
 		assertEquals(mapMowersMovementsExpected, mapMowersMovements);
 	}

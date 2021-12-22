@@ -28,9 +28,11 @@ class MowerControllerTest {
 		mockMvc.perform(multipart("/mower").file(multipartFile))
 				.andDo(print())
 				.andExpect(status().isOk())
+				.andExpect(jsonPath("$.[0].id").value(1))
 				.andExpect(jsonPath("$.[0].coordinate.x").value(1))
 				.andExpect(jsonPath("$.[0].coordinate.y").value(3))
 				.andExpect(jsonPath("$.[0].orientation").value("N"))
+				.andExpect(jsonPath("$.[1].id").value(2))
 				.andExpect(jsonPath("$.[1].coordinate.x").value(5))
 				.andExpect(jsonPath("$.[1].coordinate.y").value(1))
 				.andExpect(jsonPath("$.[1].orientation").value("E"));

@@ -7,6 +7,7 @@ import lombok.Data;
 @Builder
 public class Mower {
 	
+	private Integer id;
 	private Coordinate coordinate;
 	private Orientation orientation;
 	

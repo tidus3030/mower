@@ -27,6 +27,8 @@ import com.publicis.sapient.mower.model.Plan;
 @Service
 public class FileService {
 	
+	private Integer id = 1;
+	
 	/**
 	 * Parse plan in first line of file
 	 *
@@ -79,6 +81,7 @@ public class FileService {
 			}
 			try {
 				mowerWithMovements.put(Mower.builder()
+						.id(id++)
 						.coordinate(Coordinate.builder().x(Integer.parseInt(s[0])).y(Integer.parseInt(s[1])).build())
 						.orientation(Orientation.valueOf(s[2]))
 						.build(), new ArrayList<>());

@@ -53,7 +53,7 @@ public class MowerController {
 			mowerWithMovements.forEach((mower, movements) -> movementMowerService.moveMower(plan, mower, movements));
 			
 			// sort mowers
-			Comparator<Mower> comparator = Comparator.comparingInt((Mower mower) -> mower.getCoordinate().getX());
+			Comparator<Mower> comparator = Comparator.comparingInt(Mower::getId);
 			
 			return ResponseEntity.ok(mowerWithMovements.keySet().stream()
 					.sorted(comparator)
