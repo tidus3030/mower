@@ -34,3 +34,4 @@ List of allowed moves:
 You can launch the springboot application by starting the jar or by launching MowerApplication.java You can test the application
 using [swagger](http://localhost:8080/swagger-ui/), some test files are present in directory src/main/resources/files
 
+Application is also launched on [hiroku](https://tidus3030-mower.herokuapp.com/swagger-ui/)
