@@ -1,0 +1,11 @@
+spring:
+    servlet:
+        multipart:
+            location: ${java.io.tmpdir}
+            max-file-size: 128KB
+    mvc:
+        pathmatch :
+            matching-strategy: ant_path_matcher
+server:
+    error:
+        include-message: always
